@@ -1,1 +1,44 @@
+Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
 
+An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+
+===============================
+
+UMPIRE
+• Understand
+1. Could the grid be empty?
+2. Any requirements on time/space complexity?
+
+• Match
+So this problem is obvious a graph problem.
+Speaking of graph, there are two important algorithms, DFS and BFS.
+There time complexity is quite the same.
+DFS:
+Typically uses recursion and its space complexity is mainly dependent on the recursion stack's depth.
+The space complexity of DFS can be O(h), where h is the height of the graph or tree.
+BFS:
+uses a queue to implement the level-by-level traversal and needs to store all nodes at the current level. 
+In the worst case, if the tree is completely balanced, the last level could contain about n/2 nodes. 
+Hence, BFS’s space complexity can reach O(n).
+
+For this question, both are good, but DFS is more straightforward.
+
+• Plan
+Sketch visualizations and write pseudocode
+Walk through a high-level implementation with an existing diagram
+
+There are two intuitive things to do. 
+1. Go through each element in the grid.
+2. Do the DFS algo.
+
+• Implement
+
+Implement the solution (make sure to know what level of detail the interviewer wants)
+• Review
+
+Re-check that your algorithm solves the problem by running through important examples
+Go through it as if you are debugging it, assuming there is a bug
+• Evaluate
+
+Finish by giving space and run-time complexity
+Discuss any pros and cons of the solution
