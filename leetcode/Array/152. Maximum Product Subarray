@@ -1,13 +1,22 @@
-
+Given an integer array nums, find a subarray that has the largest product, and return the product.
+The test cases are generated so that the answer will fit in a 32-bit integer.
+=============================
 UMPIRE
 • Understand
 
-1. Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
-2. Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
-3. Verify that you and the interviewer are aligned on the expected inputs and outputs
+Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
+Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
+Verify that you and the interviewer are aligned on the expected inputs and outputs
+1. Can input array be null or empty?
+2. Can the subarray has more than 2 numbers?
+3. Can I choose any number in the array and multiply it?
+4. Will it has negative number or zero?
+
 
 • Match
 1. See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category
+So this is an array problem.
+
 
 • Plan
 1. Sketch visualizations and write pseudocode
