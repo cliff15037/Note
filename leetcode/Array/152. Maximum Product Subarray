@@ -1,1 +1,26 @@
 
+UMPIRE
+• Understand
+
+1. Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
+2. Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
+3. Verify that you and the interviewer are aligned on the expected inputs and outputs
+
+• Match
+1. See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category
+
+• Plan
+1. Sketch visualizations and write pseudocode
+2. Walk through a high-level implementation with an existing diagram
+
+• Implement
+1. Implement the solution (make sure to know what level of detail the interviewer wants)
+
+• Review
+1. Re-check that your algorithm solves the problem by running through important examples
+2. Go through it as if you are debugging it, assuming there is a bug
+
+• Evaluate
+1. Finish by giving space and run-time complexity
+2. Discuss any pros and cons of the solution
+
