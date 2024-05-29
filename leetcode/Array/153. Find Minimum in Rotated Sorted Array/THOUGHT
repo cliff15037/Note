@@ -1,1 +1,50 @@
+Suppose an array of length n sorted in ascending order is rotated between 1 and n times. 
+For example, the array nums = [0,1,2,4,5,6,7] might become:
 
+[4,5,6,7,0,1,2] if it was rotated 4 times.
+[0,1,2,4,5,6,7] if it was rotated 7 times.
+Notice that 
+rotating an array [a[0], a[1], a[2], ..., a[n-1]] 1 time results in the array [a[n-1], a[0], a[1], a[2], ..., a[n-2]].
+
+Given the sorted rotated array nums of unique elements, return the minimum element of this array.
+
+You must write an algorithm that runs in O(log n) time.
+==========================================================
+
+UMPIRE
+• Understand
+Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
+Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
+Verify that you and the interviewer are aligned on the expected inputs and outputs
+1. Can there are duplicated numbers in array? No
+2. Is it always rotate from 0 to n-1? No
+3. Can the input be null or empty?
+
+
+• Match
+See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category
+This is an array problem.
+And speak of O(log(n)) time complexity.
+I come up with binary search.
+
+• Plan
+Sketch visualizations and write pseudocode
+Walk through a high-level implementation with an existing diagram
+I think we can use binary search to start.
+Maintain 2 pointer, start, end, and calculate mid.
+When we find mid by start and end, and check if mid is the target(target < target's left ele).
+If (mid's left element > nums[0]), means it is ascending on the left part.
+Then we don't need to see left part, move start to mid.
+else, the right part is ascending order, check if (mid>mid-1), then target is on the mid's left.
+
+
+• Implement
+1. Implement the solution (make sure to know what level of detail the interviewer wants)
+
+• Review
+1. Re-check that your algorithm solves the problem by running through important examples
+2. Go through it as if you are debugging it, assuming there is a bug
+
+• Evaluate
+1. Finish by giving space and run-time complexity
+2. Discuss any pros and cons of the solution
