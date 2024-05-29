@@ -11,9 +11,9 @@ public:
                 return m;
             }
 
-            if( nums[m] >= nums[l] ){
+            if( nums[m] >= nums[l] ){ // m might equal to l
                 //l~m is ascending
-                if (nums[l]<target && target<nums[m]){
+                if (nums[l]<=target && target<nums[m]){ // already check (nums[m] == target), but (nums[l]==target) is possible
                     // target in the left side of m
                     r = m-1;
                 } else {
@@ -21,7 +21,7 @@ public:
                 }
             } else {
                 // m ~ r is ascending
-                if (target>nums[m] && target<nums[r]) {
+                if (target>nums[m] && target<=nums[r]) {
                     l = m+1;
                 } else {
                     r = m-1;
