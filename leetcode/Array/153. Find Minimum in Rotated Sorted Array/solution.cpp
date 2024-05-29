@@ -6,7 +6,7 @@ public:
     int findMin(vector<int>& nums) {
         int l = 0, r = nums.size() - 1;
 
-        while (l <= r) {
+        while (l <= r) { // use "<=" because we want to check each element 
             if (nums[l] <= nums[r]) {  // if the all left to right is ascending
                 return nums[l];
             }
@@ -43,16 +43,17 @@ public:
         int n = nums.size();
         int l = 0, r = n - 1;
         
-        while (l < r) {
+        while (l < r) { // use "<" because we can stop when l is neighbor of r, don't need to check l==r
             int mid = l + (r - l) / 2;  // prevent overflowing
             if (nums[mid] < nums[r]) {
-                r = mid;  // min in the mid or mid's left
+              // mid to r is ascending
+                r = mid;  // min on the mid or in mid's left
             } else {
                 l = mid + 1;  // min in the mid's right
             }
         }
         
-        return nums[l];  // 或 nums[r], 此时 l == r
+        return nums[l];  // Or nums[r], cause now l == r
     }
 };
 
