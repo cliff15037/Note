@@ -1,0 +1,32 @@
+UMPIRE
+• Understand
+1. Can there only be even-numbered nodes, not odd-numbered nodes?
+2. Any requirement on time/space complexity?
+3. Will the input be nullptr or empty?
+
+• Match
+1. See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category
+It is apparently Linked List or Two Pointers problems.
+
+But we still need to observe it first.
+And we discover these list can be split into left part and right part, thus, 2 list.
+And then combine together interval.
+The left part list and right part list will combine in an "interleaved" pattern, alternating between left and right repeatedly.
+
+
+• Plan
+1. Sketch visualizations and write pseudocode
+2. Walk through a high-level implementation with an existing diagram
+
+Start from finding the end of the left list.
+And then, reverse the right part to right list we want.
+Combine the two part of lists.
+
+• Implement
+1. Implement the solution (make sure to know what level of detail the interviewer wants)
+
+• Review
+1. Re-check that your algorithm solves the problem by running through important examples
+2. Go through it as if you are debugging it, assuming there is a bug
+
+• Evaluate
