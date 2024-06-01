@@ -25,7 +25,8 @@ public:
 
 
 /*
-  This is a better method with O(1) space
+  This is a better method for space complexity,  with O(1) space.
+  But, cost the time because sorting need avg nlog(n)
 */
 class Solution {
 public:
