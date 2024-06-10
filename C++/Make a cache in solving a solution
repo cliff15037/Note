@@ -1,0 +1,15 @@
+When we try to do leetcode, we need to memorize the visited path in DFS or solved subcase in backtracking sometimes.
+Therefore, a cache is crucial.
+In python, we can simply use dp = {}, dp[i, j]=true
+However, in C++ we need some more work.
+
+1. Use hash map
+unordered_map<pair<int, int>, bool> dp;
+But hash in C++ only support some built-in type, not <int, int>.
+We need to make our own hash function to support it.
+unordered_map<pair<int, int>, bool, hash_pair> dp;
+
+2. Use 2-D array
+
+3. Use nested map
+unordered_map<int, unordered_map<int, bool>> dp;
