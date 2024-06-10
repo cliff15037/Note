@@ -10,6 +10,24 @@ We need to make our own hash function to support it.
 unordered_map<pair<int, int>, bool, hash_pair> dp;
 
 2. Use 2-D array
+In C++, to initialize a 2-D array, need to do it dynamically by for loop:
+  void fun(int **a) {
+      std::cout << a[0][1];
+  }
+  int **arr = new int*[2];
+  for (int i = 0; i < 2; ++i) {
+    arr[i] = new int[2];
+  }
+  
+  // initialize 2-D arr
+  arr[0][0] = 1;
+  arr[0][1] = 56;
+  arr[1][0] = 2;
+  arr[1][1] = 33;
+  fun(arr);
+
+So, easiest way is to use vector.
+
 
 3. Use nested map
 unordered_map<int, unordered_map<int, bool>> dp;
