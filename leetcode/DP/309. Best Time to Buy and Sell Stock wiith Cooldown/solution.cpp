@@ -29,5 +29,37 @@ public:
 
 
 /*
-  The following solution is DFS/backtracking with cache, also a kind of DP
+  The following solution is DFS/decision tree method with cache, also a kind of DP
 */
+class Solution {
+public:
+/*
+    There are three move: buy, sell, cooldown(do nothing)
+    cooldown can happen in any position.
+    buy and sell, are opposite, each position can only choose one.
+*/  
+
+    int dfs(int i, bool buying, vector<int>& prices, unordered_map<int, unordered_map<bool, int>> &dp) { //return maxProfit
+        if (i>=prices.size()) return 0;
+        if (dp[i][buying]) return dp[i][buying];
+        //if (dp.count(i) && dp[i].count(buying)) return dp[i][buying];
+
+        // Both buying state and selling state can choose to do cooling
+        int cooldown = dfs(i+1, buying, prices, dp);//do nothing, keep the state of buying
+        if(buying){
+            //buying
+            int buy = dfs(i+1, !buying, prices, dp) - prices[i];
+            dp[i][buying] = max(cooldown, buy);
+        } else {
+            //selling
+            int sell = dfs(i+2, !buying, prices, dp) + prices[i];
+            dp[i][buying] = max(cooldown, sell);
+        }
+        return dp[i][buying];
+    }
+
+    int maxProfit(vector<int>& prices) {
+        unordered_map<int, unordered_map<bool, int>> dp;// a position i corresponds to a bool, to a maxProfit value
+        return dfs(0, true, prices, dp);
+    }
+};
