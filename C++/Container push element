@@ -1,0 +1,15 @@
+We consider a Heap in C++. 
+priority_queue<tuple<int, int, int, int>, vector<tuple<int, int, int, int>>, decltype(comp)> minHeap;
+
+改用vector<int>作為heap時，可以用內建comp
+priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> minHeap;
+minHeap.emplace(vector<int>{1,2,3,4});
+maxHeap.push(vector<int>{1,2,3,4});
+maxHeap.push({1,2,3,4});
+以上都是可以的，但是!!!!
+maxHeap.emplace({1,2,3,4}); 是錯的!!!
+
+push 接受一个已经构建好的元素并将其插入到容器中。
+emplace 直接在容器中构建元素，因此它接受的是构造函数的参数，而不是一个已经构建好的元素。
+当使用 maxHeap.emplace({1,2,3,4}); 时，编译器会尝试将 {1,2,3,4} 作为构造函数的参数进行传递。
+然而，对于 vector<int> 来说，它的构造函数并不接受这种形式的参数列表。使用 emplace 时，需要显式地构造参数。
