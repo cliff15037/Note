@@ -94,8 +94,11 @@ public:
             sum += num;
         }
         if ( (sum + target)%2 != 0 || sum < target ) return 0;
-
-        int newTarget = (sum + target)/2;
+        
+        
+        int newTarget = (sum + target)/2;// The sum of P, which must be positive
+        if (newTarget < 0) return 0;
+        
         vector<int> dp(newTarget+1, 0); // index of dp is the target number, the element is the combination number
         dp[0] = 1; // There is 1 combination to sum up to be 0
 
