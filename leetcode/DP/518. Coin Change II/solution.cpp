@@ -68,7 +68,7 @@ public:
               dp = [1, 1, 1, 1, 1] // all amount has only 1 combination, use coin 1, 
                                    // dp[3] now means there is 1 method to sum up to be 1 (only use coin 1)
         check coin 2:
-              dp = [1, 1, 2, 2, 3] // only chack amount>=2, it is trivial amount 2 has 2 method.
+              dp = [1, 1, 2, 2, 3] // only check amount>=2, it is trivial amount 2 has 2 method.
                                    // dp[3] = "dp[3] from previous dp status" + "dp[1] which means methods using coin [1,2] to sum up to be 1"
                                    // Because we are considering using coin 2 in this round, 
                                    // so whatever dp[1] is now, it is the method number can directly contribute to dp[3], only need to use a coin 2
