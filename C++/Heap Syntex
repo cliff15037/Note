@@ -6,6 +6,7 @@ using namespace std;
 
 /*
   To make a heap in O(n), need to use make_heap function, not priority_queue
+  make_heap simply reorganize the element in vector, but it is still a vector, can use function of vector
 */
 int main() {
     // example
@@ -15,7 +16,7 @@ int main() {
     make_heap(record.begin(), record.end(), greater<pair<int, int>>());
 
     // get the top element, O(1)
-    cout << "the top: " << record.front().first << ", " << record.front().second << endl;
+    cout << "the top: " << record.front().first << ", " << record[0].second << endl; // there are two method to get top
 
     // push a new wlwment, O(log n)
     record.push_back({2, 5});
