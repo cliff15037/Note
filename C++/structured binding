@@ -1,0 +1,12 @@
+In C++17 and later versions, structured bindings allow you to destructure objects of types like std::pair or std::tuple directly into their individual components. 
+For example, the code auto [cost, u] = minHeap.top(); 
+should work provided that your compiler and environment support C++17 or a newer version.
+
+Structured bindings provide a convenient syntax to unpack multiple values from a tuple or pair without explicitly accessing them through methods like std::get. 
+This feature enhances code readability and simplifies the handling of complex data structures by allowing direct assignment to multiple variables from a single object. It's particularly useful in scenarios where you frequently work with tuples or pairs and need to access their elements individually.
+
+
+
+
+
+
