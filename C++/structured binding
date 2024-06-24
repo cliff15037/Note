@@ -5,8 +5,26 @@ should work provided that your compiler and environment support C++17 or a newer
 Structured bindings provide a convenient syntax to unpack multiple values from a tuple or pair without explicitly accessing them through methods like std::get. 
 This feature enhances code readability and simplifies the handling of complex data structures by allowing direct assignment to multiple variables from a single object. It's particularly useful in scenarios where you frequently work with tuples or pairs and need to access their elements individually.
 
+Using Structured Bindings with std::pair and std::tuple
+int main() {
+    pair<int, string> myPair = {1, "hello"};
+    auto& [num, str] = myPair; // Unpacking a pair
+    cout << "Pair: " << num << ", " << str << endl;
+
+    tuple<int, double, string> myTuple = {2, 3.14, "world"};
+    auto& [intPart, doublePart, stringPart] = myTuple; // Unpacking a tuple
+    cout << "Tuple: " << intPart << ", " << doublePart << ", " << stringPart << endl;
+}
 
 
+Using Structured Bindings with std::map and std::unordered_map
+int main() {
+    unordered_map<string, int> ageMap;
+    ageMap["Alice"] = 30;
+    ageMap["Bob"] = 25;
+    ageMap["Charlie"] = 35;
 
-
-
+    for (auto& [name, age] : ageMap) {
+        cout << name << " is " << age << " years old." << endl;
+    }
+}
