@@ -61,3 +61,29 @@ int main()
     
     return 0;
 }
+
+
+/*
+    istringstream use space as delimeter in default, but we can indicate it by ourselves using getline
+*/
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+using namespace std;
+int main() {
+    string str = "apple/orange/banana";
+    istringstream ss(str);
+    string token;
+    
+    while (getline(ss, token, '/')) {
+        // getline will put the string into token
+        cout << token << endl;
+    }
+    return 0;
+}
+
+
+
+
+
