@@ -19,3 +19,28 @@ This allocates memory on the heap, and the object persists until you explicitly 
 This method is necessary for larger objects or objects whose lifetime must extend beyond the scope in which they are created. 
 However, it also introduces the responsibility of managing memory manually to avoid memory leaks.
 Using heap allocation also requires you to use pointers to access the object's methods and members, which introduces additional complexity.
+
+
+struct ListNode {
+  int val;
+  ListNode *next;
+  ListNode() : val(0), next(nullptr) {}
+  ListNode(int x) : val(x), next(nullptr) {}
+  ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+ 
+ListNode* foo() {
+
+    ListNode *node1 = new ListNode(1);  // create a instance on stack
+    ListNode node2(2);
+    return node1;
+    //return &node2;  // This is an undefined behavior, because node2 will be destroyed after foo end
+}
+
+int main() {
+    ListNode headNode(-1);
+    ListNode *nodeFromFoo = foo();
+    cout << nodeFromFoo->val << endl;  // 1
+
+    return 0;
+}
