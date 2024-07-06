@@ -84,6 +84,31 @@ int main() {
 }
 
 
+int main()
+{
 
+    string s = "abc";
+    cout<<s<<endl;
+    
+    s += "1";
+    cout<<s<<endl;// abc1
+    
+    s += '2';
+    cout<<s<<endl;// abc12
+    
+    s.push_back('3'); // push_back can only accept char
+    cout<<s<<endl;// abc123
+    
+    s.append("4"); // append can only accept string directly
+    cout<<s<<endl;// abc1234
+    
+    s.append(1, '5'); // but append can accept char in this way, means append one of 5 in the end
+    cout<<s<<endl; // abc12345
+    
+    s.append(s, 2, 5);// append 
+    cout<<s<<endl; // abc12345c1234
+    
+    return 0;
+}
 
 
