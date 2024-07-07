@@ -3,14 +3,17 @@ Binding: References must be initialized when declared and cannot change the obje
 Usage: References serve as aliases for variables, where operations on a reference actually manipulate the referenced object.
 Memory: References essentially store the memory address of a variable, but are syntactically simpler and safer than pointers.
 
+```cpp
 int a = 5;
 int &ref = a;  // References must be initialized when declared
 ref = 10;  // This changes the value of a, which is now 10
+```
 
 Syntax: Pointers are indicated by the symbol *.
 Binding: Pointers can change the object they point to during runtime.
 Usage: Accessing the object pointed to by a pointer requires dereferencing (*).
 Memory: Pointers store the memory address of a variable and allow access or modification of data in memory.
+```cpp
 int a = 5;
 int *ptr;  // Pointers can be initialized after declaration
 ptr = &a;
@@ -19,6 +22,7 @@ ptr = &a;
 
 int b = 20;
 ptr = &b;  // Pointers can point to different variables
+```
 
 Key Differences:
 Initialization: References must be initialized when declared; pointers can be initialized after declaration.
