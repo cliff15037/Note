@@ -64,6 +64,7 @@ int main()
 }  
 ```
 
+```cpp
 /*
     istringstream use space as delimeter in default, but we can indicate it by ourselves using getline
 */
@@ -83,8 +84,8 @@ int main() {
     }
     return 0;
 }
-
-
+```
+```cpp
 int main()
 {
 
@@ -111,8 +112,8 @@ int main()
     
     return 0;
 }
-
-
+```
+```cpp
 int main()
 {
 
@@ -141,3 +142,4 @@ int main()
     
     return 0;
 }
+```
