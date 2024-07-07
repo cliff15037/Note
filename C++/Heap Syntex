@@ -1,3 +1,4 @@
+```cpp
 #include <vector>
 #include <algorithm> // for make_heap
 #include <iostream>
@@ -32,9 +33,11 @@ int main() {
 
     return 0;
 }
+```
 
 ===============================================
 
+```cpp
 #include <queue>
 #include <vector>
 #include <iostream>
@@ -64,4 +67,4 @@ int main() {
 
     return 0;
 }
-
+```
