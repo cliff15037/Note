@@ -1,3 +1,4 @@
+'''C++
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -61,7 +62,7 @@ int main()
     
     return 0;
 }
-
+'''
 
 /*
     istringstream use space as delimeter in default, but we can indicate it by ourselves using getline
