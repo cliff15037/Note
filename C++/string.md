@@ -112,3 +112,31 @@ int main()
 }
 
 
+int main()
+{
+
+    std::string str = "12345";
+    std::string substr = "34";
+    
+    size_t idxFind = str.find('2');
+    cout<<idxFind<<endl;// 1
+    
+    size_t pos = str.find(substr);
+    cout<<pos<<endl; // 2
+    
+    // If substr found, erase it from str
+    if (pos != std::string::npos) {
+        str.erase(pos, substr.length());
+    }
+    cout<<str<<endl; // 125
+    
+    // delete from position untill npos
+    str.erase(1, std::string::npos);
+    cout<<str<<endl; // 1
+    
+    str = "abc";
+    str.erase();
+    cout<<str<<endl; // ""
+    
+    return 0;
+}
