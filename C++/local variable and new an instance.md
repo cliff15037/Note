@@ -20,7 +20,7 @@ This method is necessary for larger objects or objects whose lifetime must exten
 However, it also introduces the responsibility of managing memory manually to avoid memory leaks.
 Using heap allocation also requires you to use pointers to access the object's methods and members, which introduces additional complexity.
 
-
+```cpp
 struct ListNode {
   int val;
   ListNode *next;
@@ -44,3 +44,4 @@ int main() {
 
     return 0;
 }
+```
