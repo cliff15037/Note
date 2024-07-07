@@ -1,4 +1,4 @@
-'''C++  
+'''cpp
 
 #include <iostream>
 #include <sstream>
