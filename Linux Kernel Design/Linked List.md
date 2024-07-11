@@ -1,5 +1,5 @@
 Here is a image of linked list.  
-![image](https://github.com/cliff15037/Note/assets/81866031/97ba1937-9fd3-408d-82b0-d7c096daf98c)
+![image](https://github.com/cliff15037/Note/assets/81866031/97ba1937-9fd3-408d-82b0-d7c096daf98c)  
 How to remove a node from the linked list?
 1. The straightforward solution as below:
 ```cpp
@@ -21,8 +21,8 @@ void remove_list_node(List *list, Node *target)
 ```
 In the first solution, we need to handle the exception, removing the head is different from removing other node.
 
-2. The advanced solution:
-```cpp
+2. The advanced "elegant" solution:
+```cpp=
 void remove_list_node(List *list, Node *target)
 {
     // The "indirect" pointer points to the *address*
@@ -38,3 +38,9 @@ void remove_list_node(List *list, Node *target)
 
 In the second solution, it is very difficult to understand, but only need 4 lines to do it.  
 And there is no need to check the exception.
+
+How to understand the second solution?  
+First we need to check the structure of a node:  
+![image](https://github.com/cliff15037/Note/assets/81866031/164b27bf-bb56-4c78-8a5d-d676af63e421)
+A node has a int value, and a pointer next which points to a node.  
+Ok, then we start
