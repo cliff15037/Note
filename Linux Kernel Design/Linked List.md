@@ -22,7 +22,7 @@ void remove_list_node(List *list, Node *target)
 In the first solution, we need to handle the exception, removing the head is different from removing other node.
 
 2. The advanced "elegant" solution:
-```cpp=
+```cpp{line-numbers}
 void remove_list_node(List *list, Node *target)
 {
     // The "indirect" pointer points to the *address*
