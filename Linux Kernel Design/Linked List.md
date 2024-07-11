@@ -44,14 +44,14 @@ First we need to check the structure of a node:
 ![image](https://github.com/cliff15037/Note/assets/81866031/164b27bf-bb56-4c78-8a5d-d676af63e421)  
 A node has a int value, and a pointer "next" which points to a node.  
 Ok, then we start from illustrate "Node **indirect = &list->head;" in solution 2.  
-![image](https://hackmd.io/_uploads/B1be1p6vC.png)  
+![image](https://github.com/cliff15037/Note/assets/81866031/fbee2474-5a34-4037-970d-b9d6c6c9f181)  
 The head and indirect in the image above are both in a rectangle, aka pointer, we can consider this rectangle as a memory space, rectangle head holds the address of node A, rectangle indirect holds the address of pointer head.  
 Then, we start to do the while loop:  
 while (*indirect != target)  
 　　indirect = &(*indirect)->next;  
 We assume the target now is node B.  
 So at the first time "*indirect != target" is true, we will do "indirect = &(*indirect)->next;".  
-![image](https://hackmd.io/_uploads/Syxqxp6PA.png)
+![image](https://github.com/cliff15037/Note/assets/81866031/85451458-9101-41d4-aafd-8493daae3621)  
 As we can see in the image.  
 (*indirect) is equal to head, so (*indirect)->next is equal to head->next.  
 Thus, &(*indirect)->next is &(head->next), which is the address of the pointer variable in the node A.  
