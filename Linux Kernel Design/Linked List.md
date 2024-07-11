@@ -41,6 +41,6 @@ And there is no need to check the exception.
 
 How to understand the second solution?  
 First we need to check the structure of a node:  
-![image](https://github.com/cliff15037/Note/assets/81866031/164b27bf-bb56-4c78-8a5d-d676af63e421)
+![image](https://github.com/cliff15037/Note/assets/81866031/164b27bf-bb56-4c78-8a5d-d676af63e421)  
 A node has a int value, and a pointer next which points to a node.  
 Ok, then we start
