@@ -4,7 +4,7 @@ Vim has multiple operating modes.
 -Insert: for inserting text
 -Replace: for replacing text
 -Visual (plain, line, or block): for selecting blocks of text
--Command-line: for running a command
+-Command-line: for running a command, use : can enter the command line mode
 
 
 In Normal mode:
