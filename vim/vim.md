@@ -1,38 +1,44 @@
-Vim has multiple operating modes.
+# Vim Usage Notes
 
--Normal: for moving around a file and making edits
--Insert: for inserting text
--Replace: for replacing text
--Visual (plain, line, or block): for selecting blocks of text
--Command-line: for running a command, use : can enter the command line mode
+## Vim Modes
 
+- **Normal**: For moving around a file and making edits
+- **Insert**: For inserting text
+- **Replace**: For replacing text
+- **Visual** (plain, line, or block): For selecting blocks of text
+- **Command-line**: For running commands, use `:` to enter command-line mode
 
-In Normal mode:
-    x will delete the character under the cursor.
-    If want to undo it: Esc, then use 'u'
-    If want to redo it: Ctrl + r
+## Normal Mode Commands
 
-Split in vim:
-    Ctrl-w then c（Ctrl-w c）to cancel cur tab. (can also use :q)
-    :sp, :vsp to create new tab
-    :vsp file3.txt    # open a split window and open file name file3.txt
-  Change between tab:
-  Ctrl-w then h：to left
-  Ctrl-w then j：to down
-  Ctrl-w then k：to top
-  Ctrl-w then l：to right
+- `x`: Delete the character under the cursor
+- Undo: `Esc`, then `u`
+- Redo: `Ctrl + r`
 
-List all vim:
-  :ls
-  For example:
+## Splitting Windows in Vim
+
+- `Ctrl-w c`: Close the current tab (can also use `:q`)
+- `:sp`: Create a new horizontal split
+- `:vsp`: Create a new vertical split
+- `:vsp file3.txt`: Open a vertical split and open `file3.txt`
+
+## Switching Between Windows
+
+- `Ctrl-w h`: Move to the window on the left
+- `Ctrl-w j`: Move to the window below
+- `Ctrl-w k`: Move to the window above
+- `Ctrl-w l`: Move to the window on the right
+
+## Managing Buffers
+
+- `:ls`: List all open buffers
+  - Example:
+    ```
     :ls
     1 #    "test.txt"                     line 30
     2 %a   "my.txt"                       line 2
-
-    %a is the current editing file.
-    # is current used file.
-Change to a window:
-  :b<number>
-Kill buffer:
-  :bd number
-  :bd      #This can kilkl current buffer
+    ```
+  - `%a` indicates the current editing file
+  - `#` indicates the currently used file
+- Switch to a buffer: `:b<number>`
+- Kill a buffer: `:bd <number>`
+  - `:bd`: Kill the current buffer
