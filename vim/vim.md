@@ -40,6 +40,7 @@
 - `v` go to visual mode, and can choose char by char
 - `V` go to visual line mode, and can choose line by line
 - `Ctrl D` delete the choosen text
+- `3e` : This is the combination of command, select 3 words, also can do lots of similar stuff. `2d` delete 2 line, `2de` delete 2 words. `8j` move down to 8 line later. 
 
 ## Splitting Windows in Vim
 
