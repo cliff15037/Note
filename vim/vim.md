@@ -13,6 +13,7 @@
 - `x`: Delete the character under the cursor
 - Undo: `Esc`, then `u`
 - Redo: `Ctrl + r`
+- If accidently press Ctrl+z, it will put process to back, use `fg` to get it to front, `jobs` to watch process ont he back.
 - Basic movement: hjkl (left, down, up, right)
 - Words: w (next word), b (beginning of word), e (end of word)
 - Lines: 0 (beginning of line), ^ (first non-blank character), $ (end of line)
