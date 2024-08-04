@@ -24,6 +24,13 @@
 - Misc: % (corresponding item)
 - Find: f{character}, t{character}, F{character}, T{character} find/to forward/backward {character} on the current line, / ; for navigating matches
 - Search: /{regex}, n / N for navigating matches
+- `Ctrl D` is scroll down, `Ctrl U` is scroll up
+
+## Insert Mode
+- `Ctrl D` delete the char
+
+## Visual Mode
+- `Ctrl D` delete the choosen text
 
 ## Splitting Windows in Vim
 
