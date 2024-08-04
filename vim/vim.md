@@ -25,11 +25,20 @@
 - Find: f{character}, t{character}, F{character}, T{character} find/to forward/backward {character} on the current line, / ; for navigating matches
 - Search: /{regex}, n / N for navigating matches
 - `Ctrl D` is scroll down, `Ctrl U` is scroll up
+- `o` open a new empty line, and enter insert mode
+- `dd` : can delete a whole line.
+- `d` : is delete, can use combination command, `dh`, `dj`, `dk`, `dl`, delete left char, next line, pre line, right char, `de` delete to the end of the word.
+- `c` is similar to `d`, change to the end of the word, and enter the insert mode.
+- `r` is replace, `ra` to replace the char now to char a, press r as command, then press a as parameter
+- Copy : `yy` copy the current line, `yw` copy the word, use `v` into visual mode to choose target the use `p` to paste
+- Paste : `p` is paste
 
 ## Insert Mode
 - `Ctrl D` delete the char
 
 ## Visual Mode
+- `v` go to visual mode, and can choose char by char
+- `V` go to visual line mode, and can choose line by line
 - `Ctrl D` delete the choosen text
 
 ## Splitting Windows in Vim
@@ -45,6 +54,8 @@
 - `Ctrl-w j`: Move to the window below
 - `Ctrl-w k`: Move to the window above
 - `Ctrl-w l`: Move to the window on the right
+
+- `:"qa`: close all windows
 
 ## Managing Buffers
 
